@@ -9,8 +9,11 @@ class Temperature():
     def ToString(self):
         return self.Temperature, " ", self.Scale
     
-    ### Begin of Conversions
+    # Prints the temperature's scale
+    def GetScale(self):
+        return self.Scale
     
+    ### Begin of Conversions
     def ToCelsius(tempValue, tempScale):
         if tempScale != "C":
             # F->C
@@ -45,6 +48,22 @@ class Temperature():
                 return tempValue + 273.15
         else:
             return tempValue
-    
     ### End of Conversions
     
+    ### Begin of operations
+    def Add(self, temp2, scale2):
+        # Main class scale        
+        mainScale = self.Scale
+        
+        if mainScale == "C":
+            if scale2 == "F":
+                Temperature()
+            elif scale2 == "K:":
+            else:
+                return "Invalid scale"
+    ### End of operations
+    
+a = Temperature(25, "C")
+b = Temperature(5, "C")
+
+print (a.Add(b.Temperature))
