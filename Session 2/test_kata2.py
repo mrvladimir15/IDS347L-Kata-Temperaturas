@@ -9,7 +9,7 @@ class TestTemp2():
         assert Temperature.Add(self, 5, "F") == 10
     
     def test_t2(self):
-        assert Temperature.Substract(self, 5, "K") == -233.15
+        assert Temperature.Substract(self, 5, "K") == 293.15
     
     def test_t3(self):
         assert Temperature.MultiplyBy(self, 4, "C") == 100
@@ -21,4 +21,4 @@ class TestTemp2():
         assert Temperature.DivideBy(self, 293.15, "K") == 1.25
     
     def test_t6(self):
-        assert Temperature.ToString() == "25C"
+        assert Temperature.ToString(self) == (25, "C")

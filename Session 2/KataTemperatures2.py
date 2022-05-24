@@ -32,7 +32,7 @@ class Temperature():
             return self.Temperature
     
     def ToFahrenheit(self):
-        if self.Scale == "F":
+        if self.Scale != "F":
             # C -> F
             if self.Scale == "C":
                 return (self.Temperature*1.8)+32
@@ -60,52 +60,44 @@ class Temperature():
     
     ### Begin of operations
     def Add(self, temp2, scale2):
-        newValue = 0
-        
-        if scale2 == "C":
+        if self.Scale == "C":
             newValue = Temperature(temp2, scale2).ToCelsius()
-        elif scale2 == "F":
+        elif self.Scale == "F":
             newValue = Temperature(temp2, scale2).ToFahrenheit()
-        elif scale2 == "K":
+        elif self.Scale == "K":
             newValue = Temperature(temp2, scale2).ToKelvin()
         else:
             return "Invalid scale"
         return self.Temperature + newValue
     
     def Substract(self, temp2, scale2):
-        newValue = 0
-        
-        if scale2 == "C":
-            newValue == Temperature(temp2, scale2).ToCelsius()
-        elif scale2 == "F":
-            newValue == Temperature(temp2, scale2).ToFahrenheit()
-        elif scale2 == "K":
-            newValue == Temperature(temp2, scale2).ToKelvin()
+        if self.Scale == "C":
+            newValue = Temperature(temp2, scale2).ToCelsius()
+        elif self.Scale == "F":
+            newValue = Temperature(temp2, scale2).ToFahrenheit()
+        elif self.Scale == "K":
+            newValue = Temperature(temp2, scale2).ToKelvin()
         else:
             return "Invalid scale"
         return self.Temperature - newValue
     
     def MultiplyBy(self, temp2, scale2):
-        newValue = 0
-        
-        if scale2 == "C":
+        if self.Scale == "C":
             newValue = Temperature(temp2, scale2).ToCelsius()
-        elif scale2 == "F":
+        elif self.Scale == "F":
             newValue = Temperature(temp2, scale2).ToFahrenheit()
-        elif scale2 == "K":
+        elif self.Scale == "K":
             newValue = Temperature(temp2, scale2).ToKelvin()
         else:
             return "Invalid scale"
         return self.Temperature * newValue
     
     def DivideBy(self, temp2, scale2):
-        newValue = 1
-        
-        if scale2 == "C":
+        if self.Scale == "C":
             newValue = Temperature(temp2, scale2).ToCelsius()
-        elif scale2 == "F":
+        elif self.Scale == "F":
             newValue = Temperature(temp2, scale2).ToFahrenheit()
-        elif scale2 == "K":
+        elif self.Scale == "K":
             newValue = Temperature(temp2, scale2).ToKelvin()
         else:
             return "Invalid scale"
