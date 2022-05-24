@@ -32,7 +32,7 @@ class Temperature():
             return self.Temperature
     
     def ToFahrenheit(self):
-        if self.Scale != "F":
+        if self.Scale == "F":
             # C -> F
             if self.Scale == "C":
                 return (self.Temperature*1.8)+32
