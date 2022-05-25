@@ -84,7 +84,7 @@ class Temperature():
         return self.Temperature * newValue
     
     def DivideBy(self, temp2, scale2):
-        if self.Scale == "C"        :
+        if self.Scale == "C":
             newValue = Temperature(temp2, scale2).ToCelsius()
         elif self.Scale == "F":
             newValue = Temperature(temp2, scale2).ToFahrenheit()
