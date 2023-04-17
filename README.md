@@ -1,4 +1,4 @@
-# IDS347L-Kata-Temperatuas
+# IDS347L-Kata-Temperaturas
 Autor: 1098139 - Vladimir González
 
 # Index de archivos
